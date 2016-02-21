@@ -1,0 +1,96 @@
+diff --git a/Kraken/Kraken.cpp b/Kraken/Kraken.cpp
+index 01fc2ec..ccd87cf 100644
+--- a/Kraken/Kraken.cpp
++++ b/Kraken/Kraken.cpp
+@@ -5,6 +5,7 @@
+ #include <assert.h>
+ #include <string.h>
+ #include <stdlib.h>
++#include <unistd.h>
+ #include "../a5_cpu/A5CpuStubs.h"
+ #include "../a5_ati/A5AtiStubs.h"
+ 
+diff --git a/Kraken/ServerCore.cpp b/Kraken/ServerCore.cpp
+index 7f3af92..fe5cfc2 100644
+--- a/Kraken/ServerCore.cpp
++++ b/Kraken/ServerCore.cpp
+@@ -8,6 +8,7 @@
+ #include <fcntl.h>
+ #include <errno.h>
+ #include <stdio.h>
++#include <unistd.h>
+ 
+ #define MAX_CLIENTS 25
+ 
+diff --git a/Utilities/DeltaLookup.cpp b/Utilities/DeltaLookup.cpp
+index b782cbf..5a1bb18 100644
+--- a/Utilities/DeltaLookup.cpp
++++ b/Utilities/DeltaLookup.cpp
+@@ -10,6 +10,7 @@
+ #include <stdlib.h>
+ #include <stropts.h>
+ #include <fcntl.h>
++#include <unistd.h>
+ 
+ #define READ8()\
+     bits = (mBitBuffer>>(mBitCount-8))&0xff;                 \
+diff --git a/Utilities/SSDlookup.cpp b/Utilities/SSDlookup.cpp
+index 420f091..c075550 100644
+--- a/Utilities/SSDlookup.cpp
++++ b/Utilities/SSDlookup.cpp
+@@ -10,6 +10,7 @@
+ #include <stdlib.h>
+ #include <stropts.h>
+ #include <fcntl.h>
++#include <unistd.h>
+ 
+ SSDlookup::SSDlookup(std::string path, std::string device)
+ {
+diff --git a/Utilities/SSDwriter.cpp b/Utilities/SSDwriter.cpp
+index 1b2d5b8..e7e0161 100644
+--- a/Utilities/SSDwriter.cpp
++++ b/Utilities/SSDwriter.cpp
+@@ -9,6 +9,7 @@
+ #include <math.h>
+ #include <string>
+ #include <iostream>
++#include <unistd.h>
+ 
+ using namespace std;
+ 
+diff --git a/Utilities/a5lookup.cpp b/Utilities/a5lookup.cpp
+index d1af92c..86e43a0 100644
+--- a/Utilities/a5lookup.cpp
++++ b/Utilities/a5lookup.cpp
+@@ -1,6 +1,7 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <iostream>
++#include <unistd.h>
+ 
+ #include "Bidirectional.h"
+ #include "SSDlookup.h"
+diff --git a/Utilities/checktable.cpp b/Utilities/checktable.cpp
+index ce7a85c..9ba4301 100644
+--- a/Utilities/checktable.cpp
++++ b/Utilities/checktable.cpp
+@@ -6,6 +6,7 @@
+ #include <stdint.h>
+ #include <map>
+ #include <iostream>
++#include <unistd.h>
+ 
+ #include "../a5_cpu/A5CpuStubs.h"
+ 
+diff --git a/a5_cpu/a5cpu_test.cpp b/a5_cpu/a5cpu_test.cpp
+index 38d5676..b09bbf7 100644
+--- a/a5_cpu/a5cpu_test.cpp
++++ b/a5_cpu/a5cpu_test.cpp
+@@ -19,6 +19,7 @@
+ #include "A5CpuStubs.h"
+ #include <stdio.h>
+ #include <iostream>
++#include <unistd.h>
+ 
+ 
+ int main(int argc, char* argv[])
